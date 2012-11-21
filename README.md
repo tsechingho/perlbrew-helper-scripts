@@ -18,5 +18,7 @@ echo "source ~/.switch_perlbrew.bashrc perl-5.16.2" >> ~/.profile
 perlbrew lib create bioperl
 source ~/.switch_perlbrew.bashrc perl-5.16.2@bioperl
 
+source ~/.switch_perlbrew.bashrc perl-5.16.2 --use
+
 echo "alias perls="source ~/.switch_perlbrew.bashrc"" >> ~/.profile
 ```
