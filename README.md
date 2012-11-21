@@ -12,7 +12,11 @@ Usage example:
 
 ```
 perlbrew install perl-5.16.2
-perlbrew lib create bioperl
 cp switch_perlbrew.bashrc ~/.switch_perlbrew.bashrc
+echo "source ~/.switch_perlbrew.bashrc perl-5.16.2" >> ~/.profile
+
+perlbrew lib create bioperl
 source ~/.switch_perlbrew.bashrc perl-5.16.2@bioperl
+
+echo "alias perls="source ~/.switch_perlbrew.bashrc"" >> ~/.profile
 ```

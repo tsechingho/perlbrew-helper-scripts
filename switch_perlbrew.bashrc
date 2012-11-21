@@ -19,6 +19,12 @@ elif [[ ! `perlbrew list | grep -E ^.{2}$lib$` ]]; then
   return
 fi
 
+while IFS='@' read -ra NAME; do
+  if [[ ${NAME[0]} == $PERLBREW_PERL && ${NAME[1]} == $PERLBREW_LIB ]]; then
+    return
+  fi
+done <<< $lib
+
 unset_perl5lib () {
   if [[ $PERL5LIB =~ .+ ]]; then
     unset PERL5LIB
