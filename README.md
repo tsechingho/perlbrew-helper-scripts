@@ -22,3 +22,8 @@ source ~/.switch_perlbrew.bashrc perl-5.16.2 --use
 
 echo "alias perls="source ~/.switch_perlbrew.bashrc"" >> ~/.profile
 ```
+
+License
+-------
+
+MIT
